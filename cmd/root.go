@@ -18,10 +18,13 @@ func Execute() {
 	todos.ReadTodos()
 
 	var rooCmd *RootCmd
-	rCmd := &cobra.Command{Use: "app"}
+	rCmd := &cobra.Command{
+		Use:   "todo",
+		Short: "todo is a CLI client of task control.",
+	}
 
 	rCmd.AddCommand(rooCmd.ListCmd(todos))
-	rCmd.AddCommand(rooCmd.AddCmd())
+	rCmd.AddCommand(rooCmd.AddCmd(todos))
 
 	if err := rCmd.Execute(); err != nil {
 		fmt.Println(err)
