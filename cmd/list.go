@@ -1,8 +1,9 @@
 package cmd
 
 import (
-	"cobra-basics/internal/todo"
 	"fmt"
+
+	"github.com/lalizita/cobra-basics/internal/todo"
 
 	"github.com/spf13/cobra"
 )

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cobra-basics/cmd"
+	"github.com/lalizita/cobra-basics/cmd"
 )
 
 func main() {
